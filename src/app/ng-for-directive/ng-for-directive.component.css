@@ -1,0 +1,8 @@
+.item-List {
+  background-color: aquamarine;
+  position: relative;
+  display: inline-block;
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap; */
+}
