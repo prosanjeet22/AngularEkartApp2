@@ -1,0 +1,18 @@
+<p>child-component works!</p>
+
+<!-- <div>
+  <input type="text" placeholder="searchValue" [value]="passValueToChild" />
+</div>
+<div>
+  <h1>Passing the value from child to parent</h1>
+  <input type="text" (onkeypress)="onChange($event)" />
+</div> -->
+<button *ngIf="false" ;else myTemplate>search me</button>
+<ng-template #myTemplate>
+  <p>This is example of ng template Example</p>
+  <p>Use ng template for the new value</p>
+</ng-template>
+<!-- <div myTemplate></div> -->
+<div *ngTemplateOutlet="myTemplate">
+  <p>hello prosanjeet</p>
+</div>

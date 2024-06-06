@@ -1,0 +1,14 @@
+<p>ng-component-example works!</p>
+<!-- <p>Hello this is prosanjeet kumar</p> -->
+<ng-template #myTemplate>
+  <p>Hello this is prosanjeet kumar</p>
+  <div>
+    <input type="text" #InputValue />
+    <button type="button" (click)="getInputVlaue()">Click Me</button>
+  </div>
+</ng-template>
+<div>
+  <p>This is the value of input box {{ inputType }}</p>
+</div>
+<div *ngTemplateOutlet="myTemplate"></div>
+<!-- <div *ngTemplateOutlet="myTemplate"></div> -->

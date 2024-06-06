@@ -67,4 +67,6 @@ export class NgForDirectiveComponent {
       discount: 40,
     },
   ];
+
+  productlen = this.product.length;
 }

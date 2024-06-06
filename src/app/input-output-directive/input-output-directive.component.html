@@ -1,0 +1,26 @@
+<p>input-output-directive works!</p>
+<app-practice></app-practice>
+<div class="inputBox">
+  <p>This is the search box</p>
+  <input type="text" name="searchText" [(ngModel)]="searchText" />
+  <button>Search</button>
+</div>
+
+<p><strong>this is the search value here</strong>{{ searchText }}</p>
+<app-child-component [passValueToChild]="searchText"></app-child-component>
+
+<!-- Template Reference Variable | Angular Component & Directives -->
+
+<!-- <div>
+  <input type="text" class="ekart_serach_product" #searchTextValue />
+  <button class="btn btn-search" (click)="getSearchTextValue2()">
+    NewSearch
+  </button>
+  <button class="btn btn-search" (click)="getSearchTextValue(searchTextValue)">
+    Search
+  </button>
+</div> -->
+<!-- <div>
+  <p>This is the Template Reference Variable {{ viewChildDecoreter }}</p>
+  <p>This is the Template Reference Variable {{ searchTextValue1 }}</p>
+</div> -->

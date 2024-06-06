@@ -1,0 +1,30 @@
+<p>product works!</p>
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.title }}</h5>
+    <img [src]="product.imageUrl" class="card-img-top" alt="Image Not Found" />
+    <h6 class="card-subtitle mb-2 text-body-secondary">
+      Model: {{ product.model }}
+    </h6>
+    <h6
+      class="card-subtitle mb-2 text-body-secondary"
+      [ngStyle]="{ fontWeight: 'bold', color: 'red' }"
+    >
+      Cost: {{ product.cost }}
+    </h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">
+      Instock: {{ product.instock }}
+    </h6>
+    <h6
+      class="card-subtitle mb-2 text-body-secondary"
+      *ngIf="product.discount > 0"
+    >
+      Discount: {{ product.discount }}
+    </h6>
+    <p class="card-text">
+      {{ product.discription }}
+    </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>

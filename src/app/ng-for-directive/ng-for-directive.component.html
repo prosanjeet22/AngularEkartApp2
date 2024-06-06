@@ -3,35 +3,7 @@
   <a *ngFor="let item of mainMenu" href="#">{{ item }}</a
   ><br />
 </div>
-
-<div class="item-List" *ngFor="let item of product">
-  <div class="card" style="width: 18rem">
-    <div class="card-body">
-      <h5 class="card-title">{{ item.title }}</h5>
-      <img [src]="item.imageUrl" class="card-img-top" alt="Image Not Found" />
-      <h6 class="card-subtitle mb-2 text-body-secondary">
-        Model: {{ item.model }}
-      </h6>
-      <h6
-        class="card-subtitle mb-2 text-body-secondary"
-        [ngStyle]="{ fontWeight: 'bold', color: 'red' }"
-      >
-        Cost: {{ item.cost }}
-      </h6>
-      <h6 class="card-subtitle mb-2 text-body-secondary">
-        Instock: {{ item.instock }}
-      </h6>
-      <h6
-        class="card-subtitle mb-2 text-body-secondary"
-        *ngIf="item.discount > 0"
-      >
-        Discount: {{ item.discount }}
-      </h6>
-      <p class="card-text">
-        {{ item.discription }}
-      </p>
-      <a href="#" class="card-link">Card link</a>
-      <a href="#" class="card-link">Another link</a>
-    </div>
-  </div>
+<app-filter [all]="productlen" [inStock]="30" [outOfStock]="10"> </app-filter>
+<div class="item-List">
+  <app-product *ngFor="let item of product" [product]="item"></app-product>
 </div>
